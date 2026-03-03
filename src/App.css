@@ -1,0 +1,169 @@
+.app-shell {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.app-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.app-header h1,
+.page-title {
+  margin: 0;
+}
+
+.main-nav,
+.actions-row {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.stack,
+.toolbar,
+.result-list {
+  display: grid;
+  gap: 0.65rem;
+}
+
+.panel,
+.result-link,
+.nav-link,
+.button,
+.search-input,
+.json-input,
+.toggle-button {
+  border: 1px solid var(--border);
+  background: #fff;
+  color: var(--text);
+}
+
+.panel,
+.result-link {
+  padding: 0.75rem;
+  display: block;
+}
+
+.nav-link,
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.45rem 0.7rem;
+  font-size: 0.92rem;
+  cursor: pointer;
+}
+
+.nav-link.active,
+.button.primary {
+  background: var(--brand);
+  border-color: var(--brand);
+  color: #fff;
+}
+
+.page-subtitle,
+.search-label,
+.node-meta,
+.hint-text,
+.result-path,
+.node-type {
+  color: var(--muted);
+}
+
+.page-subtitle {
+  margin: 0.35rem 0 0;
+}
+
+.search-input,
+.json-input {
+  width: 100%;
+  padding: 0.55rem 0.65rem;
+  font-size: 0.95rem;
+}
+
+.json-input {
+  min-height: 220px;
+  resize: vertical;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+}
+
+.search-input:focus,
+.json-input:focus {
+  outline: none;
+  border-color: #9ca3af;
+}
+
+.tree-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.75rem;
+}
+
+.tree-list,
+.result-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.node-row {
+  --depth: 0;
+  display: grid;
+  grid-template-columns: auto auto 1fr auto;
+  gap: 0.4rem;
+  align-items: center;
+  padding: 0.28rem 0;
+  padding-left: calc(var(--depth) * 1rem);
+  border-bottom: 1px solid #f3f4f6;
+}
+
+.node-name:hover {
+  text-decoration: underline;
+}
+
+.node-type,
+.result-path {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 0.8rem;
+}
+
+.toggle-button,
+.toggle-placeholder {
+  width: 1.6rem;
+  height: 1.6rem;
+}
+
+.toggle-placeholder {
+  display: inline-block;
+}
+
+.toggle-button:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+.detail-grid p {
+  margin: 0.3rem 0;
+}
+
+.panel h3,
+.panel h4 {
+  margin: 0;
+}
+
+@media (max-width: 820px) {
+  .app-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .tree-grid {
+    grid-template-columns: 1fr;
+  }
+}
